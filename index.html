@@ -40,7 +40,34 @@
 @media(max-width:980px){.navlinks{gap:13px}.nav-cta{display:none}.hero{min-height:650px;background-position:58% center}.two-col{gap:40px}.flow-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){html{scroll-padding-top:70px}.navin{min-height:82px}.menu{display:block}.navlinks{display:none;position:absolute;top:70px;left:0;right:0;padding:20px 5%;background:#ffffff;border-bottom:1px solid #e5eaf0;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.hero{min-height:640px;background-position:57% center;background-image:linear-gradient(90deg,rgba(3,11,18,.97),rgba(3,11,18,.82) 62%,rgba(3,11,18,.48)),var(--stadium-bg);background-size:cover;background-position:center center}.hero-content{padding:70px 0}.hero-stamp{display:none}.intro-band .wrap{align-items:flex-start;flex-direction:column;gap:5px}.section{padding:72px 0}.service-grid{grid-template-columns:1fr}.service-card{min-height:0}.two-col{grid-template-columns:1fr}.principles{gap:18px}.price-grid{grid-template-columns:1fr}.contact-form{padding:20px}.footer-inner{align-items:flex-start;flex-direction:column}}
 @media(max-width:480px){.brand{font-size:1.2rem;gap:10px}.brand-symbol{width:50px;height:50px;flex-basis:50px}.brand small{font-size:.48rem;letter-spacing:.16em}.hero h1{font-size:2.55rem}.hero p{font-size:.92rem}.hero-actions .btn{width:100%}.principles,.flow-grid,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.brand{font-size:1.03rem}.section-head{margin-bottom:35px}}
-.monthly-card.recommended{border:2px solid var(--gold);box-shadow:0 18px 48px rgba(0,0,0,.28);position:relative}.monthly-card.recommended .price-label{color:var(--gold);font-weight:800;letter-spacing:.08em}.cancellation{margin-top:28px}.profile .copy>p:first-of-type{font-size:1.5rem;font-weight:800;letter-spacing:.08em;color:var(--gold)}
+.monthly-card.recommended{border:2px solid var(--gold);box-shadow:0 18px 48px rgba(0,0,0,.28);position:relative}.monthly-card.recommended .price-label{color:var(--gold);font-weight:800;letter-spacing:.08em}
+/* Unlimited membership: strongest visual emphasis */
+.monthly-card.unlimited-featured{
+  grid-column:1/-1;
+  border:3px solid #FFD21F;
+  background:linear-gradient(135deg,#3B2A08 0%,#172D4B 48%,#0B1F3A 100%);
+  box-shadow:0 0 0 4px rgba(255,210,31,.14),0 22px 58px rgba(0,0,0,.38),inset 0 6px 0 #FFD21F;
+  transform:scale(1.015);
+  position:relative;
+}
+.monthly-card.unlimited-featured .monthly-recommend{
+  background:#FFD21F;color:#14233A;font-size:1.05rem;padding:10px 24px;
+  letter-spacing:.12em;box-shadow:0 4px 18px rgba(255,210,31,.25);
+}
+.monthly-card.unlimited-featured .monthly-limit{
+  display:inline-block;background:rgba(255,210,31,.14);color:#FFE36A;
+  border:1px solid #FFD21F;padding:6px 13px;border-radius:999px;font-weight:800;
+}
+.monthly-card.unlimited-featured .price-label{color:#FFE36A;font-size:.82rem}
+.monthly-card.unlimited-featured h3{font-size:clamp(1.55rem,3vw,2.15rem);color:#fff;line-height:1.35}
+.monthly-card.unlimited-featured .unlimited-subtitle{color:#FFE36A;font-size:1.08rem;font-weight:800;margin:4px 0 12px}
+.monthly-card.unlimited-featured .monthly-price{font-size:clamp(2.7rem,5vw,3.5rem);color:#FFE36A}
+.monthly-card.unlimited-featured .monthly-price small{color:rgba(255,255,255,.75)}
+.monthly-card.unlimited-featured ul{color:#fff;font-size:1rem}
+.monthly-card.unlimited-featured li{margin:10px 0}
+.monthly-card.unlimited-featured .btn{background:#FFD21F;color:#14233A;border-color:#FFD21F;font-weight:900;font-size:1.05rem;padding:16px}
+@media(max-width:760px){.monthly-card.unlimited-featured{transform:none}}
+.cancellation{margin-top:28px}.profile .copy>p:first-of-type{font-size:1.5rem;font-weight:800;letter-spacing:.08em;color:var(--gold)}
 
 /* Premium philosophy and OMOWA profile */
 .philosophy{background:linear-gradient(135deg,#0B1F3A 0%,#102B4E 58%,#142F52 100%);position:relative;overflow:hidden}
@@ -220,25 +247,57 @@
   .hero .hero-description{font-size:.9rem}
 }
 
+
+/* 2026-11 OMOWA visual refinement */
+.navlinks{flex-wrap:nowrap;white-space:nowrap;gap:clamp(6px,.75vw,12px);font-size:clamp(.60rem,.68vw,.70rem)}
+.brand small{font-size:.55rem;letter-spacing:.18em;white-space:nowrap}
+@media(max-width:1100px) and (min-width:761px){
+  .navin{gap:12px}.brand{gap:9px;font-size:1.35rem}.brand-symbol{width:52px;height:52px;flex-basis:52px}
+  .brand small{font-size:.48rem;letter-spacing:.12em}.navlinks{gap:7px;font-size:.59rem}
+}
+.hero-panel{
+  max-width:760px;margin:34px auto;padding:clamp(28px,5vw,58px) clamp(22px,5vw,54px);
+  text-align:left;background:linear-gradient(135deg,rgba(7,24,45,.92),rgba(13,43,76,.82));
+  color:#fff;border:1px solid rgba(255,210,31,.58);border-radius:4px;
+  box-shadow:0 24px 70px rgba(0,0,0,.34);backdrop-filter:blur(8px);
+}
+.hero-panel .eyebrow{color:#FFD21F;font-size:.76rem;letter-spacing:.32em}
+.hero-panel h1{margin:22px 0 18px;font-size:clamp(2.7rem,6vw,5rem);line-height:1.22;letter-spacing:.035em;color:#fff}
+.hero-panel h1 em{color:#FFD21F}
+.hero-panel .hero-subtitle{font-size:clamp(1.1rem,2vw,1.45rem);color:#fff;font-weight:800;margin:0 0 10px}
+.hero-panel .hero-description{font-size:.96rem;color:#dbe6f1;line-height:1.9;margin:0}
+.hero-panel .hero-actions{margin-top:26px}
+.hero-panel .hero-foot{margin-top:36px;font-size:.66rem;letter-spacing:.24em;color:#dbe6f1}
+.monthly-card.recommended:has(.monthly-recommend){
+  border:2px solid #FFD21F;
+}
+.monthly-card:has(.monthly-recommend):has(.monthly-limit) {
+  border:2px solid #FFD21F;
+}
+.monthly-card .monthly-recommend{font-size:.94rem;padding:9px 17px;box-shadow:0 5px 18px rgba(255,210,31,.22)}
+.monthly-card:has(.monthly-recommend) .monthly-price{color:#FFD21F;font-size:2.65rem}
+.monthly-card:has(.monthly-recommend) h3{font-size:1.55rem}
+.monthly-card:has(.monthly-recommend) .monthly-limit{background:#FFD21F;color:#0B1F3A}
+@media(max-width:760px){
+  .hero-panel{margin:0 auto;padding:28px 22px}
+  .hero-panel .hero-foot{font-size:.55rem;letter-spacing:.13em}
+}
+
 </style>
 </head>
 <body>
 <header class="nav">
  <div class="wrap navin">
   <a class="brand" href="#home" aria-label="OMOWA ホーム"><svg class="brand-symbol" viewBox="0 0 48 48" role="img" aria-label="OMOWAロゴ"><path d="M5 38 22 10 31 25 40 10 47 38H36L30 27 24 38H5Z" fill="#19385F"/><path d="M11 39 42 7" stroke="#FFD21F" stroke-width="4" stroke-linecap="round"/></svg><span>OMOWA<small>FOOTBALL PERFORMANCE ANALYSIS</small></span></a>
-  <nav class="navlinks" id="navlinks" aria-label="メインナビゲーション"><a href="#philosophy">企業理念</a><a href="#services">サービス</a><a href="#profile">プロフィール</a><a href="#flow">ご利用の流れ</a><a href="#pricing">料金プラン</a><a href="#contact">お問い合わせ</a><a href="#cancel-policy">キャンセルポリシー</a><a href="#terms">利用規約</a></nav>
+  <nav class="navlinks" id="navlinks" aria-label="メインナビゲーション"><a href="#philosophy">理念</a><a href="#services">サービス</a><a href="#profile">プロフィール</a><a href="#flow">ご利用の流れ</a><a href="#pricing">料金プラン</a><a href="#payment">お支払い</a><a href="#contact">お問い合わせ</a><a href="#cancel-policy">キャンセルポリシー</a><a href="#terms">利用規約</a></nav>
   <a class="btn nav-cta" href="#contact">無料相談はこちら　→</a>
   <button class="menu" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">☰</button>
  </div>
 </header>
 <main>
 <section class="hero" id="home"><div class="wrap"><div class="hero-content">
-<div style="text-align:center; margin:35px auto; padding:25px 15px; background:#fff8e5;color:#142b4a; border:2px solid #d6a52a; border-radius:12px;">
-<div style="font-size:28px; font-weight:bold; color:#142b4a;">2026年12月 START</div>
-<div style="font-size:24px; font-weight:bold; color:#142b4a;">OMOWA 新規受付開始！</div>
-<div style="font-size:19px; font-weight:bold; color:#142b4a;">先着順・定員になり次第終了</div>
-<a class="btn" href="#contact" style="margin-top:16px;">まずはご相談　→</a>
-</div>
+<div class="hero-panel">
+
  <div class="eyebrow">FOOTBALL PERFORMANCE ANALYSIS</div>
  <h1>気づきが、<br><em>成長を変える。</em></h1>
  <p class="hero-subtitle">映像から自分を知り、次の一歩へ。</p>
@@ -325,9 +384,25 @@ JFAフィジカルフィットネスCライセンス
  <div class="section-head"><div class="eyebrow">PRICE PLAN</div><h2>料金プラン</h2><p class="muted">単発でのご利用から、継続的なサポートまで。目的やご予算に合わせてお選びいただけます。</p><p class="pricing-guide">おすすめは、継続的に成長をサポートする月額プランです。</p></div>
  <div class="price-grid">
   <div class="plan-group-title"><span>PERSONAL PLAN</span><h3>個人向けプラン</h3><p>選手一人ひとりのプレーを振り返り、成長につなげるプラン</p></div>
-<article class="price-card"><div class="price-label">STARTER</div><h3>個人分析</h3><p class="muted">まずは自分のプレーを振り返りたい選手へ</p><div class="price">¥5,000 <small>／税別</small></div><ul><li>指定テーマを中心とした映像分析</li><li>強み・改善ポイントの整理</li><li>フィードバックシート</li></ul><a class="btn ghost" href="#contact" data-plan="個人分析">このプランを相談　→</a></article>
+<article class="price-card"><div class="price-label">STARTER</div><h3>個人分析</h3><p class="muted">まずは自分のプレーを振り返りたい選手へ</p><div class="price">¥5,000 <small>／税別</small></div><ul><li>指定テーマを中心とした映像分析</li><li>強み・改善ポイントの整理</li><li>フィードバックシート</li></ul><a class="btn ghost" href="#contact" data-plan="個人分析">まずは申し込む　→</a></article>
 
 <div class="monthly-options">
+   <article class="monthly-card">
+    <div class="monthly-layout">
+     <div>
+      <div class="price-label">MONTHLY MEMBERSHIP</div>
+      <h3>OMOWA 月額プラン（月1回）</h3>
+      <p class="muted">月1回の映像分析で、定期的にプレーを振り返り、継続的な成長を目指す選手へ。</p>
+      <div class="monthly-price">¥5,000 <small>／月・税別</small></div>
+      <p class="monthly-tax">税込お支払い額：5,500円／月（消費税10%の場合）</p>
+     </div>
+     <div>
+      <ul><li>月1回の映像分析</li><li>強み・改善ポイントの整理</li><li>毎月継続して振り返りをサポート</li></ul>
+      <a class="btn" href="#contact" data-plan="OMOWA月額プラン（月1回・月額5,000円税別）">まずは申し込む　→</a>
+     </div>
+    </div>
+   </article>
+   
   <article class="monthly-card recommended">
    <div class="monthly-layout">
     <div>
@@ -345,43 +420,56 @@ JFAフィジカルフィットネスCライセンス
       <li>好きなタイミングで利用可能</li>
       <li>初回決済後、翌月以降は毎月自動決済</li>
      </ul>
-     <a class="btn" href="#contact" data-plan="OMOWA月額プラン（月2回・月額7,000円税別）">まずは相談する　→</a>
+     <a class="btn" href="#contact" data-plan="OMOWA月額プラン（月2回・月額7,000円税別）">まずは申し込む　→</a>
     </div>
    </div>
   </article>
-  <article class="monthly-card recommended">
+  <article class="monthly-card recommended unlimited-featured">
    <div class="monthly-layout">
     <div>
-     <div class="monthly-recommend">おすすめ</div>
-     <div class="monthly-limit">10名限定</div>
-     <div class="price-label">MONTHLY MEMBERSHIP</div>
-     <h3>OMOWA 月額プラン（月4回）</h3>
-     <p class="muted">【継続サポート】月4回の映像分析で、好きなタイミングにプレーを振り返り、継続的な成長を目指す選手におすすめです。</p>
-     <div class="monthly-price">¥10,000 <small>／月・税別</small></div>
-     <p class="monthly-tax">税込お支払い額：11,000円／月（消費税10%の場合）</p>
+     <div class="monthly-recommend">超おすすめ</div>
+     <div class="monthly-limit">回数制限なし</div>
+     <div class="price-label">OMOWA UNLIMITED MEMBERSHIP</div>
+     <h3>OMOWA 月額プラン（月無制限）</h3>
+     <p class="unlimited-subtitle">いつでも継続サポート</p>
+     <p class="muted">試合・トレーニング・日々の成長について、いつでも、どんな内容でも相談できる継続サポート。一人ひとりの課題や目標に寄り添い、映像分析と具体的なアドバイスを通して、継続的な成長をサポートします。</p>
+     <div class="monthly-price">¥9,000 <small>／月・税別</small></div>
+     <p class="monthly-tax">税込お支払い額：9,900円／月（消費税10%の場合）</p>
     </div>
     <div>
      <ul>
-      <li>月4回の映像分析</li>
-      <li>好きなタイミングで利用可能</li>
-      <li>未使用分を含む保有回数の上限は6回</li>
+      <li>回数制限なしの月額継続サポート</li>
+      <li>試合・トレーニング・日々の成長について、いつでもどんな内容でも相談可能</li>
+      <li>映像分析と具体的なアドバイス</li>
       <li>初回決済後、翌月以降は毎月自動決済</li>
      </ul>
-     <a class="btn" href="#contact" data-plan="OMOWA月額プラン（月4回・月額10,000円税別）">まずは相談する　→</a>
+     <p><strong>一人で悩まない。いつでも相談できる環境を。</strong></p>
+     <a class="btn" href="#contact" data-plan="いつでも継続サポート（月額9,000円税別）">まずは申し込む　→</a>
     </div>
    </div>
   </article>
  </div>
  </div>
  <div class="monthly-flow">
+    <div class="monthly-flow" id="payment">
+   <h3>お支払い・決済ページ</h3>
+   <p class="muted">まずはお問い合わせフォームからお申し込みください。内容を確認後、該当プランのSquare決済リンクをメールでご案内します。</p>
+   <div class="monthly-steps">
+    <div class="monthly-step" data-square-link="https://square.link/u/2ghCIbvM"><strong>個人分析</strong><p>5,000円／1回（税別）</p><p>お申し込み内容の確認後、決済リンクをご案内します。</p></div>
+    <div class="monthly-step" data-square-link="https://square.link/u/iQ5jsI0o"><strong>月1回プラン</strong><p>月額5,000円（税別）</p><p>お申し込み内容の確認後、決済リンクをご案内します。</p></div>
+    <div class="monthly-step" data-square-link="https://square.link/u/v6UHFGyt"><strong>月2回プラン</strong><p>月額7,000円（税込7,700円）</p><p>お申し込み内容の確認後、決済リンクをご案内します。</p></div>
+    <div class="monthly-step" data-square-link="https://square.link/u/BCs7FG7S"><strong>OMOWA 月額プラン（月無制限）</strong><p>月額9,000円（税込9,900円）</p><p>お申し込み内容の確認後、決済リンクをご案内します。</p></div>
+   </div>
+   <p class="monthly-caution">※決済はお申し込み後です。内容確認後、OMOWAからメールでSquare決済リンクをお送りします。</p>
+  </div>
   <h3>月額プランのお申し込み・決済の流れ</h3>
   <div class="monthly-steps">
    <div class="monthly-step"><b>STEP 01</b><strong>お申し込み</strong><p>フォームから月額プランを選択して送信。</p></div>
-   <div class="monthly-step"><b>STEP 02</b><strong>内容確認・ご案内</strong><p>OMOWAが内容を確認し、定期決済登録用の案内をメールで送信。</p></div>
-   <div class="monthly-step"><b>STEP 03</b><strong>初回決済・登録</strong><p>案内された決済ページで支払い方法を登録し、初回決済。</p></div>
-   <div class="monthly-step"><b>STEP 04</b><strong>利用開始・自動決済</strong><p>決済確認後に利用開始。以降は毎月自動で決済。</p></div>
+   <div class="monthly-step"><b>STEP 02</b><strong>内容確認・ご案内</strong><p>OMOWAが申し込み内容を確認し、料金・サービス内容をご案内。</p></div>
+   <div class="monthly-step"><b>STEP 03</b><strong>決済リンク送付</strong><p>確認後、該当プランのSquare決済リンクをメールでお送りします。</p></div>
+   <div class="monthly-step"><b>STEP 04</b><strong>お支払い・利用開始</strong><p>決済確認後、サービス開始日などを調整して利用開始。</p></div>
   </div>
-  <p class="monthly-caution">※毎月の自動決済には、Stripe等の定期決済サービスとの接続・設定が必要です。現在、このHTMLには申込フォームと案内表示を反映していますが、実際のカード決済機能はまだ接続されていません。</p>
+  <p class="monthly-caution">※お申し込み前に決済が発生することはありません。お申し込み内容を確認した後にお支払いをご案内します。</p>
  </div>
  <div class="monthly-flow cancellation">
   <h3>月額プランの退会・解約フォーム</h3>
@@ -413,12 +501,12 @@ JFAフィジカルフィットネスCライセンス
    <div class="field"><label for="name">お名前（保護者の方） *</label><input id="name" name="name" autocomplete="name" required placeholder="例：山田 太郎"></div>
    <div class="field"><label for="email">メールアドレス *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="例：hello@example.com"></div>
    <div class="field"><label for="age">選手の年代</label><select id="age" name="age"><option value="">選択してください</option><option>小学生（低学年）</option><option>小学生（高学年）</option><option>中学生</option><option>その他・チーム利用</option></select></div>
-   <div class="field"><label for="plan">相談したい内容</label><select id="plan" name="plan"><option value="">選択してください</option><option>個人分析</option><option>OMOWA月額プラン（月2回・月額7,000円税別）</option><option>OMOWA月額プラン（月4回・月額10,000円税別）</option><option>チームコンサル（月1回・月額15,000円税別）</option><option>チーム・その他の相談</option><option>まずは質問したい</option></select></div>
+   <div class="field"><label for="plan">相談したい内容</label><select id="plan" name="plan"><option value="">選択してください</option><option>個人分析</option><option>OMOWA月額プラン（月1回・月額5,000円税別）</option><option>OMOWA月額プラン（月2回・月額7,000円税別）</option><option>いつでも継続サポート（月額9,000円税別）</option><option>チームコンサル（月1回・月額15,000円税別）</option><option>チーム・その他の相談</option><option>まずは質問したい</option></select></div>
    <div class="field full"><label for="message">ご相談内容 *</label><textarea id="message" name="message" required placeholder="分析したいプレー、目標、ご質問などをご記入ください。"></textarea></div>
   </div>
   <label class="consent"><input type="checkbox" id="consent" name="consent" value="同意" required><span>入力内容をお問い合わせ対応のために利用することに同意します。<a href="#privacy" target="_blank" rel="noopener">プライバシーポリシー</a>をご確認ください。</span></label>
   <button class="btn" type="submit">お問い合わせを送信する　→</button>
-  <p class="form-hint">送信すると、Formspreeを通じてOMOWAへ申し込み内容が届きます。月額プランは内容確認後、定期決済の登録方法をメールでご案内します。実際の自動決済開始には決済サービスとの接続が必要です。</p>
+  <p class="form-hint">送信すると、Formspreeを通じてOMOWAへ申し込み内容が届きます。内容確認後、該当プランのSquare決済リンクをメールでご案内します。</p>
  </form>
 </div></section>
 
